@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="logo.png" alt="dotAIslash Logo" width="150" />
+
 # 🚀 dotAIslash
 
 ### **VERSA** - Universal Rules for AI Agents
