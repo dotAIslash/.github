@@ -25,6 +25,8 @@ Every AI coding tool has its own config format:
 
 ### ✨ The Solution
 
+</div>
+
 ```
 your-project/
 └── .ai/                      ← One folder
@@ -38,6 +40,8 @@ your-project/
     └── agents/
         └── code-reviewer.json
 ```
+
+<div align="center">
 
 **VERSA: Write once, run everywhere.**
 
