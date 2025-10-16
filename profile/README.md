@@ -53,22 +53,28 @@ your-project/
 
 <table>
 <tr>
-<td width="33%" align="center">
+<td width="25%" align="center">
 
 ### 🔄 Portable
 One `.ai/` folder works with **every tool** that supports VERSA
 
 </td>
-<td width="33%" align="center">
+<td width="25%" align="center">
 
 ### 🔐 Security-First
 Explicit **deny → ask → allow** permissions with secret bindings
 
 </td>
-<td width="33%" align="center">
+<td width="25%" align="center">
 
 ### 🎯 Simple
 Plain **JSON** and **Markdown**. Git-friendly. Easy to diff.
+
+</td>
+<td width="25%" align="center">
+
+### ✨ Versatile
+**8 primitives** cover rules, prompts, agents, memory, tools, and more
 
 </td>
 </tr>
