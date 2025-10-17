@@ -268,12 +268,14 @@ See individual repositories for contributing guidelines.
 
 ## 🗺️ Roadmap
 
-### Q4 2025 - v1.0 Stable
+### Q4 2025 - v1.0 Stable ✅
 - ✅ Core specification
 - ✅ Website launch
-- ⏳ JSON Schemas
-- ⏳ Reference CLI
-- ⏳ Basic adapters
+- ✅ JSON Schemas (v1.0.0)
+- ✅ Reference CLI (v1.0.0)
+- ✅ Adapters (v1.0.0)
+- ✅ Examples (v1.0.0)
+- ✅ Conformance suite (v1.0.0)
 
 ### Q1 2026 - Ecosystem Growth
 - 📦 npm packages
@@ -309,11 +311,12 @@ See individual repositories for contributing guidelines.
 
 | Component | Status |
 |-----------|--------|
-| **Specification** | 🟡 Draft (v1.0) |
-| **JSON Schemas** | 🟡 In Progress |
-| **CLI Tool** | 🟡 In Progress |
-| **Adapters** | 🔴 Planned |
-| **Conformance** | 🔴 Planned |
+| **Specification** | 🟢 Stable (v1.0.0) |
+| **JSON Schemas** | 🟢 Released (v1.0.0) |
+| **CLI Tool** | 🟢 Released (v1.0.0) |
+| **Examples** | 🟢 Released (v1.0.0) |
+| **Adapters** | 🟢 Released (v1.0.0) |
+| **Conformance** | 🟢 Released (v1.0.0) |
 
 **Legend:** 🟢 Stable · 🟡 In Progress · 🔴 Planned
 
