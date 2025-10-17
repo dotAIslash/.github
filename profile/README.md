@@ -17,17 +17,37 @@
 
 ### 🎯 The Problem
 
-Every AI coding tool has its own config format:
-- 🔴 Cursor uses `.cursorrules`
-- 🔵 Windsurf has its own format
-- 🟢 Claude projects differ
-- 🟡 Aider uses `.aider.conf.yml`
+**15+ AI coding tools, 8+ different config formats, zero compatibility.**
 
-**Result:** Fragmented, tool-specific configuration
+Every AI coding tool has its own configuration system:
 
-### ✨ The Solution
+**IDE Extensions:**
+- 🟣 **Cursor** → `.cursorrules` (plain text)
+- 🔵 **Windsurf** → `.windsurfrules` (markdown)
+- 🟢 **GitHub Copilot** → `.github/copilot-instructions.md` (experimental)
+- 🟡 **Continue.dev** → `.continuerc.json` (JSON)
+- 🔴 **Cody** → `.cody/` folder (JSON)
+- 🟠 **Tabnine** → `.tabnine/tabnine_config.json`
+
+**CLI Tools:**
+- 🔵 **Aider** → `.aider.conf.yml` (YAML)
+- 🟣 **Mentat** → `.mentat/` folder
+- 🟢 **Sweep** → `sweep.yaml`
+- 🟡 **GPT Engineer** → `.gpt-engineer/` prompts
+
+**AI Platforms:**
+- 🟣 **Claude Projects** → Web-based only (no local files)
+- 🔵 **ChatGPT Projects** → Web-based only
+- 🟢 **Replit Ghostwriter** → `.replit` platform config
+
+**Emerging (2024-2025):**
+- Zed AI, Void, OpenHands, Augment Code, Pieces, and more launching every month
+
+**Result:** Fragmented ecosystem. Your team uses 3+ tools? Maintain 3+ config files. Switch tools? Rewrite everything.
 
 </div>
+
+### ✨ The Solution
 
 ```
 your-project/
