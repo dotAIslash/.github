@@ -17,35 +17,43 @@
 
 ---
 
-### 🎯 The Problem
+### 🎯 The Problem (as of October 2025)
 
-**15+ AI coding tools, 8+ different config formats, zero compatibility.**
+**15+ AI coding tools, a pile of formats, still no shared standard.**
 
-Every AI coding tool has its own configuration system:
+If your team mixes IDE agents, CLIs, and repo bots, you end up duplicating rules across multiple files. Switch tools? Rewrite configs. Vendor lock-in by format continues.
 
-**IDE Extensions:**
-- 🟣 **Cursor** → `.cursorrules` (plain text)
-- 🔵 **Windsurf** → `.windsurfrules` (markdown)
-- 🟢 **GitHub Copilot** → `.github/copilot-instructions.md` (experimental)
-- 🟡 **Continue.dev** → `.continuerc.json` (JSON)
-- 🔴 **Cody** → `.cody/` folder (JSON)
-- 🟠 **Tabnine** → `.tabnine/tabnine_config.json`
+**IDE and Editor Assistants:**
+- 🟣 **Cursor** → `.cursor/rules/*.mdc` files (MDC format, not `.cursorrules` anymore)
+- 🔵 **Windsurf** → `.windsurfrules` at repo root
+- 🟢 **GitHub Copilot** → `.github/copilot-instructions.md` + now supports `AGENTS.md`
+- 🟠 **Sourcegraph Cody** → `cody.json` in `.vscode/` or user settings
+- 🟡 **Continue.dev** → moving to YAML, `config.yaml` + `.continuerc.json`
+- 🔵 **Warp Terminal** → YAML Launch Configurations + MCP server setup
 
-**CLI Tools:**
-- 🔵 **Aider** → `.aider.conf.yml` (YAML)
-- 🟣 **Mentat** → `.mentat/` folder
-- 🟢 **Sweep** → `sweep.yaml`
-- 🟡 **GPT Engineer** → `.gpt-engineer/` prompts
+**CLI-First Agents:**
+- 🟣 **OpenAI Codex CLI** → `~/.codex/config.toml` + supports `AGENTS.md`
+- 🟢 **Factory Droid** → `.droid.yaml` + `AGENTS.md` for conventions
+- 🔵 **Gemini CLI** → `~/.gemini/settings.json` + `GEMINI.md` hierarchy
+- 🟡 **Aider** → `.aider.conf.yml` (YAML)
+- 🟠 **OpenHands** → `config.toml` with named LLM configs
 
-**AI Platforms:**
-- 🟣 **Claude Projects** → Web-based only (no local files)
-- 🔵 **ChatGPT Projects** → Web-based only
-- 🟢 **Replit Ghostwriter** → `.replit` platform config
+**Special Cases:**
+- 🟢 **Claude Code** → `CLAUDE.md` at repo root + `~/.claude/CLAUDE.md`
+- 🟡 **Cline (VS Code)** → `.clinerules` at repo root
+- 🟠 **Sweep AI** → `sweep.yaml` in JetBrains projects
+- 🔴 **Tabnine** → Admin console + IDE settings (no standard file)
 
-**Emerging (2024-2025):**
-- Zed AI, Void, OpenHands, Augment Code, Pieces, and more launching every month
+**The Impact:**
 
-**Result:** Fragmented ecosystem. Your team uses 3+ tools? Maintain 3+ config files. Switch tools? Rewrite everything.
+A typical stack like **Cursor + Copilot + Gemini CLI** means maintaining **three rule systems** at once:
+- `.cursor/rules/*.mdc`
+- `.github/copilot-instructions.md`
+- `.gemini/settings.json`
+
+Plus tool-specific files like `.windsurfrules`, `.aider.conf.yml`, `CLAUDE.md`, `AGENTS.md`, etc.
+
+**Result:** Fragmented ecosystem. Switching tools still triggers complete rewrites.
 
 ### ✨ The Solution
 
