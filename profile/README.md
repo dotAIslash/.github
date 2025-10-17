@@ -25,10 +25,10 @@ If your team mixes IDE agents, CLIs, and repo bots, you end up duplicating rules
 
 **IDE and Editor Assistants:**
 - 🟣 **Cursor** → `.cursor/rules/*.mdc` files (MDC format, not `.cursorrules` anymore)
-- 🔵 **Windsurf** → `.windsurfrules` at repo root
+- 🔵 **Windsurf** → `.windsurf/rules/*.md` files (shifted from `.windsurfrules` in Wave 8)
 - 🟢 **GitHub Copilot** → `.github/copilot-instructions.md` + now supports `AGENTS.md`
-- 🟠 **Sourcegraph Cody** → `cody.json` in `.vscode/` or user settings
-- 🟡 **Continue.dev** → moving to YAML, `config.yaml` + `.continuerc.json`
+- 🟠 **Sourcegraph Cody** → VS Code `settings.json` + custom command JSON files
+- 🟡 **Continue.dev** → `~/.continue/config.yaml` (config.json deprecated)
 - 🔵 **Warp Terminal** → YAML Launch Configurations + MCP server setup
 
 **CLI-First Agents:**
@@ -39,8 +39,8 @@ If your team mixes IDE agents, CLIs, and repo bots, you end up duplicating rules
 - 🟠 **OpenHands** → `config.toml` with named LLM configs
 
 **Special Cases:**
-- 🟢 **Claude Code** → `CLAUDE.md` at repo root + `~/.claude/CLAUDE.md`
-- 🟡 **Cline (VS Code)** → `.clinerules` at repo root
+- 🟢 **Claude Code** → `.claude/settings.json` + `CLAUDE.md` for instructions
+- 🟡 **Cline (VS Code)** → `.clinerules` file or `.clinerules/` directory
 - 🟠 **Sweep AI** → `sweep.yaml` in JetBrains projects
 - 🔴 **Tabnine** → Admin console + IDE settings (no standard file)
 
@@ -51,7 +51,7 @@ A typical stack like **Cursor + Copilot + Gemini CLI** means maintaining **three
 - `.github/copilot-instructions.md`
 - `.gemini/settings.json`
 
-Plus tool-specific files like `.windsurfrules`, `.aider.conf.yml`, `CLAUDE.md`, `AGENTS.md`, etc.
+Plus tool-specific files like `.windsurf/rules/*.md`, `.aider.conf.yml`, `CLAUDE.md`, `AGENTS.md`, etc.
 
 **Result:** Fragmented ecosystem. Switching tools still triggers complete rewrites.
 
