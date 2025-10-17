@@ -13,6 +13,8 @@
 [![Spec](https://img.shields.io/badge/📖_Read_Spec-VERSA_1.0-cyan?style=for-the-badge)](https://github.com/dotAIslash/dotaislash-spec)
 [![Discussions](https://img.shields.io/github/discussions/dotAIslash/dotaislash-spec?style=for-the-badge&label=💬%20Discussions&color=lime)](https://github.com/dotAIslash/dotaislash-spec/discussions)
 
+</div>
+
 ---
 
 ### 🎯 The Problem
@@ -44,8 +46,6 @@ Every AI coding tool has its own configuration system:
 - Zed AI, Void, OpenHands, Augment Code, Pieces, and more launching every month
 
 **Result:** Fragmented ecosystem. Your team uses 3+ tools? Maintain 3+ config files. Switch tools? Rewrite everything.
-
-</div>
 
 ### ✨ The Solution
 
